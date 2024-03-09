@@ -27,7 +27,7 @@ def main():
     print('Encoding Complete.')
 
     # Load the image for face detection
-    image_path = 'test_image.jpg'
+    image_path = 'Database/test_image.jpg'
     img = cv2.imread(image_path)
     imgS = cv2.resize(img, (0,0), None, 0.25, 0.25)
     imgS = cv2.cvtColor(imgS, cv2.COLOR_BGR2RGB)

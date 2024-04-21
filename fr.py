@@ -1,5 +1,5 @@
-import cv2
-import dlib
+import cv2 # OpenCV
+import dlib # dlib
 import os
 
 # Function to load images from a directory
@@ -24,7 +24,8 @@ def recognize_faces(image, detector, face_recognizer):
     return face_encodings
 
 # Function to compare face encodings
-import numpy as np
+
+import numpy as np # numpy
 
 def compare_faces(known_face_encodings, face_encoding_to_check, tolerance=0.6):
     distances = np.linalg.norm(np.array(known_face_encodings) - np.array(face_encoding_to_check), axis=1)
@@ -34,7 +35,7 @@ def compare_faces(known_face_encodings, face_encoding_to_check, tolerance=0.6):
 folder_path = r"Database"
 
 # Load the selfie image
-selfie_path = r"persons/selfie4.jpg"
+selfie_path = r"persons/selfie.jpg"
 selfie_image = cv2.imread(selfie_path)
 
 # Initialize dlib's face detector and face recognition model
